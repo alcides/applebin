@@ -1,0 +1,4 @@
+git remote | while read a; do 
+echo "==== Pushing to $a ===="
+git push --all $a
+done

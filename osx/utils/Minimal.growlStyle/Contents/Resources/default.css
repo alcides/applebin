@@ -1,0 +1,51 @@
+html {
+	height: 100%;
+}
+body {
+	position: relative;
+	color: #fff;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	margin: 0;
+	min-height: 52px;
+    text-shadow: #000 1px 1px 3px;
+}
+
+#container {
+	background-color: #222222;
+	margin: 0;
+	padding: 0;
+}
+
+#content {
+	float: left;
+	padding: 10px;
+	height: 100%;
+}
+
+#title
+{
+	font-size: 14px;
+}
+#text
+{
+	font-size: 11px;
+}
+.emergency #text
+{
+	color: red;
+}
+#icon {
+	float: left;
+	padding: 10px;
+}
+
+#icon img
+{
+	height: 32px;
+	width: 32px;
+}
+
+.clear {
+	clear: both;
+}
