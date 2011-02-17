@@ -57,7 +57,7 @@ _update_prompt () {
 
 
   ## Initial prompt
-  _prompt="[$e_white$u$e_normal:$e_cyan\w$e_normal]";
+  _prompt="[$e_white$u$e_normal@$e_byellow\h:$e_cyan\w$e_normal]";
 
   ## Color git status if any
   branch=`__git_ps1 " (%s)"`
