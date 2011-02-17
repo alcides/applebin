@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if test -z "$1"
+then
+  FILE='requirements.tlp';
+else
+  FILE=$1;
+fi
+
+while read line
+do tlmgr install $line;
+RETVAL=$?;
+[ $RETVAL -ne 0 ] && exit 1
+done < $FILE
