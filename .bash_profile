@@ -1,7 +1,11 @@
-DESKTOP=/Users/alcides/Desktop
-EDITOR='mate -w'
-
+export DESKTOP=/Users/alcides/Desktop
+export EDITOR='mate -w'
 export APPLEBIN='/Users/alcides/Code/Support/applebin'
+
+export TERM=xterm-color
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export CLICOLOR=1
+alias ls='ls -G'
 
 # sudo
 complete -cf sudo
