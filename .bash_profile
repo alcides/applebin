@@ -21,10 +21,12 @@ alias commit='git commit'
 alias push='git push'
 alias st='git status -s'
 alias sup='svn up'
+alias ca='git commit -a -m'
 
 alias syncdb='python manage.py syncdb'
 alias runserver='python manage.py runserver'
 alias nomediarunserver='python manage.py runserver --adminmedia=./static/adminmedia/'
+alias m='python manage.py'
 
 alias sugo='sudo'
 alias e='$EDITOR'
