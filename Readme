@@ -1,0 +1,14 @@
+AppleBin directory.
+- Alcides Fonseca's dotfiles and utility scripts
+- Feedback: me@alcidesfonseca.com
+
+Supports:
+    Mac OS X
+    Linux
+
+How to install:
+    1. Download Folder
+    2. sh setup.sh
+    3. edit ~/.bash_local for machine-specific configurations
+
+Note: Existing .bash_profile will be backed up into bash_local
