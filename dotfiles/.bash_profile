@@ -8,7 +8,6 @@ pushd . > /dev/null
 cd `dirname ${SCRIPT_PATH}` > /dev/null
 SCRIPT_PATH=`pwd`;
 popd  > /dev/null
-echo $SCRIPT_PATH
 
 # Locations:
 export DOTFILES=$SCRIPT_PATH
