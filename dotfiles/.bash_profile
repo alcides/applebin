@@ -21,6 +21,8 @@ source $DOTFILES/git-completion.sh
 
 # Configurations
 export PATH=$PATH:$APPLEBIN/bin
+test -d "$HOME/bin" && PATH="$HOME/bin:$PATH"
+
 if [[ `uname` == 'Darwin' ]]; then
     export EDITOR='mate -w'
 else
@@ -39,12 +41,18 @@ alias ls='ls -G'
 alias sugo='sudo'
 alias e='$EDITOR'
 alias untar='tar xvf'
+alias sizeof='du -h --max-depth=1'
+alias fn='find . -name'
 
 # Mac-Specific
 if [[ `uname` == 'Darwin' ]]; then
   alias cpp='pwd | pbcopy'
   alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
+  
+# Linux-Specific
+elif [[ `uname` == 'Linux' ]]; then
+  alias del 'mv -i \!* ~/.Trash'
 fi
 
 # Git

@@ -24,6 +24,7 @@ syntax on
 
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
+set number
 
 " Font settings
 "set guifont=Inconsolata-dz:h14
@@ -44,6 +45,12 @@ set tabstop=2
 set shiftwidth=2
 set cinkeys=0{,0},:,!^F
 
+" Backups
+set nobackup
+set nowritebackup
+set noswapfile
+
+
 set pastetoggle=<F2>
 
 set showmatch
@@ -53,6 +60,21 @@ set textwidth=78
 
 " GRB: highlighting search"
 set hls
+
+" Highlight
+highlight Comment         ctermfg=DarkGrey guifg=#444444
+highlight StatusLineNC    ctermfg=Black ctermbg=DarkGrey cterm=bold
+highlight StatusLine      ctermbg=Black ctermfg=LightGrey
+
+" Highlight trailing whitespace
+set list listchars=trail:.,tab:>.
+highlight SpecialKey ctermfg=DarkGray ctermbg=Black
+
+
+" Latex Stuff
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+
 
 " GRB: Always source python.vim for Python files
 au FileType python source ~/.vim/scripts/python.vim
@@ -121,7 +143,12 @@ set wildmode=longest:full     " *wild* mode
 set wildignore+=*.o,*~,.lo    " ignore object files
 set wildmenu                  " menu has tab completion
 
-" Java stuff
+" Ruby Stuff
+au BufRead,BufNewFile *.ru         set ft=ruby
+au BufRead,BufNewFile Rakefile     set ft=ruby
+
+
+" Java Stuff
 let g:EclimBrowser='open'
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabDefaultCompletionTypeDiscovery = [
