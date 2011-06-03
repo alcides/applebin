@@ -50,9 +50,6 @@ if [[ `uname` == 'Darwin' ]]; then
   alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
   
-# Linux-Specific
-elif [[ `uname` == 'Linux' ]]; then
-  alias del 'mv -i \!* ~/.Trash'
 fi
 
 # Git
