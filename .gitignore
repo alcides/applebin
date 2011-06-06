@@ -1,1 +1,3 @@
 *.o
+dotfiles/.vim/.netrwhist
+*.o

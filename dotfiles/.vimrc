@@ -84,6 +84,8 @@ highlight SpecialKey ctermfg=DarkGray ctermbg=Black
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
+" Alcides: Tab bar
+hi TabLineSel guifg=#857b6f guibg=#000000 cterm=None ctermfg=Cyan ctermbg=Grey
 
 " GRB: Always source python.vim for Python files
 au FileType python source ~/.vim/scripts/python.vim
@@ -92,6 +94,10 @@ au FileType python source ~/.vim/scripts/python.vim
 au! Syntax python source ~/.vim/syntax/python.vim
 let python_highlight_all = 1
 let python_slow_sync = 1
+
+
+" Cuda compilation
+au FileType cu set makeprg=nvcc\ %
 
 " Remap the tab key to do autocompletion or indentation depending on the
 " context (from http://www.vim.org/tips/tip.php?tip_id=102)
