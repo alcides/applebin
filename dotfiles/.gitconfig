@@ -1,0 +1,32 @@
+[user]
+	name = Alcides Fonseca
+	email = me@alcidesfonseca.com
+[core]
+	editor = /usr/bin/vim
+	excludesfile = /Users/alcides/.gitignore
+	whitespace = fix,trailing-space,space-before-tab,cr-at-eol
+	pager = cat
+[rerere]
+	enabled = 1
+	autoupdate = 1
+[alias]
+    w = whatchanged
+    uncommit = reset --soft HEAD^
+    amend = commit --amend -C HEAD
+    weekly = shortlog --since=1weekago
+[push]
+	default = matching
+[apply]
+	ignorewhitespace = change
+	whitespace = fix
+[diff]
+    renames = copy
+[color]
+	ui = true
+	pager = true
+    interactive = auto
+    diff = auto
+    status = auto
+    branch = auto
+[url "https://github.com/"]
+    insteadOf = "gh:"

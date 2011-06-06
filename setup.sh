@@ -10,9 +10,10 @@ fi
 rm -rf ~/.vim*
 rm -rf ~/.screenrc
 rm -rf ~/.gitignore
+rm -rf ~/.gitconfig
 
 ln -s $APPLEBIN/dotfiles/.vimrc ~/.vimrc
 ln -s $APPLEBIN/dotfiles/.vim ~/.vim
 ln -s $APPLEBIN/dotfiles/.gitignore ~/.gitignore
+ln -s $APPLEBIN/dotfiles/.gitconfig ~/.gitconfig
 ln -s $APPLEBIN/dotfiles/.screenrc ~/.screenrc
-
