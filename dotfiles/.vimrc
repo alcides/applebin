@@ -11,6 +11,9 @@ set wildmenu
 set ignorecase
 set smartcase
 
+set incsearch
+set autoread " Load files from outside
+
 " Store temporary files in a central spot
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -19,15 +22,21 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backspace=indent,eol,start
 
 set background=dark
-colorscheme solarized
+colorscheme wombat
 syntax on
 
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
+set ruler " show the cursor position all the time
+set showcmd " display incomplete commands
 set number
 
 " Font settings
 "set guifont=Inconsolata-dz:h14
+
+set encoding=utf8
+try
+    lang en_US
+catch
+endtry
 
 " always set autoindenting on
 set autoindent
