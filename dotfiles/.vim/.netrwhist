@@ -1,6 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/alcides/Code/wallmanager'
 let g:netrw_dirhist_2='/Users/alcides/Code/jcl'
 let g:netrw_dirhist_3='/home/alcides/Code/Support/applebin'
 let g:netrw_dirhist_4='/home/alcides/Code/Support/applebin/dotfiles/.vim/ruby/command-t'
+let g:netrw_dirhist_5='/Users/alcides/Code/cehm'
+let g:netrw_dirhist_6='/Users/alcides/Desktop/analysis'
+let g:netrw_dirhist_7='/Users/alcides/Desktop/analysis_d'
+let g:netrw_dirhist_8='/Users/alcides/Dropbox/Aeminium/AeminiumGPU/Tests/Decider/analysis_d'
+let g:netrw_dirhist_9='/Users/alcides/Downloads/TJrPythonProtoCards/samples/codycards'

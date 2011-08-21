@@ -1,5 +1,15 @@
 :CommandT	command-t.txt	/*:CommandT*
 :CommandTFlush	command-t.txt	/*:CommandTFlush*
+EnhComm-Bugs	EnhancedCommentify.txt	/*EnhComm-Bugs*
+EnhComm-Credits	EnhancedCommentify.txt	/*EnhComm-Credits*
+EnhComm-EnhCommentify	EnhancedCommentify.txt	/*EnhComm-EnhCommentify*
+EnhComm-Fallbacks	EnhancedCommentify.txt	/*EnhComm-Fallbacks*
+EnhComm-Keybindings	EnhancedCommentify.txt	/*EnhComm-Keybindings*
+EnhComm-NewLanguages	EnhancedCommentify.txt	/*EnhComm-NewLanguages*
+EnhComm-Options	EnhancedCommentify.txt	/*EnhComm-Options*
+EnhComm-Support	EnhancedCommentify.txt	/*EnhComm-Support*
+EnhancedCommentify	EnhancedCommentify.txt	/*EnhancedCommentify*
+EnhancedCommentify()	EnhancedCommentify.txt	/*EnhancedCommentify()*
 Filename()	snipMate.txt	/*Filename()*
 GlobalSnip	snipMate.txt	/*GlobalSnip*
 GlobalSnip!	snipMate.txt	/*GlobalSnip!*

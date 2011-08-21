@@ -24,6 +24,9 @@ set backspace=indent,eol,start
 set background=dark
 colorscheme wombat
 syntax on
+filetype on
+filetype plugin on
+filetype indent on
 
 set ruler " show the cursor position all the time
 set showcmd " display incomplete commands
@@ -79,6 +82,10 @@ highlight StatusLine      ctermbg=Black ctermfg=LightGrey
 set list listchars=trail:.,tab:>.
 highlight SpecialKey ctermfg=DarkGray ctermbg=Black
 
+" Disable toolbar
+if has("gui_running")
+    set guioptions=egmrt
+endif
 
 " Latex Stuff
 set grepprg=grep\ -nH\ $*
@@ -88,12 +95,7 @@ let g:tex_flavor='latex'
 hi TabLineSel guifg=#857b6f guibg=#000000 cterm=None ctermfg=Cyan ctermbg=Grey
 
 " GRB: Always source python.vim for Python files
-au FileType python source ~/.vim/scripts/python.vim
-
-" GRB: Use custom python.vim syntax file
-au! Syntax python source ~/.vim/syntax/python.vim
-let python_highlight_all = 1
-let python_slow_sync = 1
+autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
 
 
 " Cuda compilation
