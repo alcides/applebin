@@ -85,6 +85,8 @@ highlight SpecialKey ctermfg=DarkGray ctermbg=Black
 " Disable toolbar
 if has("gui_running")
     set guioptions=egmrt
+else
+    colorscheme torte
 endif
 
 " Latex Stuff
@@ -93,13 +95,6 @@ let g:tex_flavor='latex'
 
 " Alcides: Tab bar
 hi TabLineSel guifg=#857b6f guibg=#000000 cterm=None ctermfg=Cyan ctermbg=Grey
-
-" GRB: Always source python.vim for Python files
-autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
-
-
-" Cuda compilation
-au FileType cu set makeprg=nvcc\ %
 
 " Remap the tab key to do autocompletion or indentation depending on the
 " context (from http://www.vim.org/tips/tip.php?tip_id=102)
@@ -116,9 +111,6 @@ inoremap <s-tab> <c-n>
 
 set switchbuf=useopen
 
-autocmd BufRead,BufNewFile *.html source ~/.vim/indent/html_grb.vim
-autocmd FileType htmldjango source ~/.vim/indent/html_grb.vim
-
 set number
 set numberwidth=5
 
@@ -127,29 +119,11 @@ filetype plugin indent on
 command! W :w
 command! R :!python %
 
-map <leader>rm :BikeExtract<cr>
-
-function! ExtractVariable()
-    let name = input("Variable name: ")
-    if name == ''
-        return
-    endif
-    " Enter visual mode (not sure why this is needed since we're already in
-    " visual mode anyway)
-    normal! gv
-
-    " Replace selected text with the variable name
-    exec "normal c" . name
-    " Define the variable on the line above
-    exec "normal! O" . name . " = "
-    " Paste the original selected text to be the variable value
-    normal! $p
-endfunction
-
 " Always show tab bar
 set showtabline=2
 
 map <leader>f :CommandT<cr>
+map <leader>t :CommandT<cr>
 nmap <leader><left>   :leftabove  vnew<CR>
 nmap <leader><right>  :rightbelow vnew<CR>
 nmap <leader><up>     :leftabove  new<CR>
