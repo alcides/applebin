@@ -1,5 +1,35 @@
-" Pathogen to manage bundles
-call pathogen#runtime_append_all_bundles() 
+set nocompatible               " be iMproved
+filetype on
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+Bundle "vim-scripts/Wombat"
+
+" Plugins
+Bundle "L9"
+Bundle 'FuzzyFinder'
+Bundle "SuperTab"
+
+Bundle "thinca/vim-quickrun"
+Bundle "gmarik/snipmate.vim"
+Bundle "hrp/EnhancedCommentify"
+Bundle "derekwyatt/vim-scala"
+
+Bundle 'git://git.wincent.com/command-t.git'
+let g:CommandTMatchWindowAtTop=1 " show window at top
+
+" Ack
+Bundle "ack.vim"
+noremap <LocalLeader># "ayiw:Ack <C-r>a<CR>
+vnoremap <LocalLeader># "ay:Ack <C-r>a<CR>
+
+
+filetype plugin indent on
 
 " Remember more commands and search history
 set history=1000
@@ -45,9 +75,9 @@ endtry
 set autoindent
 
 set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
 set cindent
 set smartindent
@@ -118,6 +148,8 @@ filetype plugin indent on
 
 command! W :w
 command! R :!python %
+map <leader>s :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
 
 " Always show tab bar
 set showtabline=2
