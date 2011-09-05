@@ -19,6 +19,8 @@ Bundle "thinca/vim-quickrun"
 Bundle "gmarik/snipmate.vim"
 Bundle "hrp/EnhancedCommentify"
 Bundle "derekwyatt/vim-scala"
+Bundle "thinca/vim-quickrun"
+Bundle "scrooloose/syntastic"
 
 Bundle 'git://git.wincent.com/command-t.git'
 let g:CommandTMatchWindowAtTop=1 " show window at top
@@ -108,6 +110,9 @@ highlight Comment         ctermfg=DarkGrey guifg=#444444
 highlight StatusLineNC    ctermfg=Black ctermbg=DarkGrey cterm=bold
 highlight StatusLine      ctermbg=Black ctermfg=LightGrey
 
+" Error marks
+let g:syntastic_enable_signs=1
+
 " Highlight trailing whitespace
 set list listchars=trail:.,tab:>.
 highlight SpecialKey ctermfg=DarkGray ctermbg=Black
@@ -147,7 +152,7 @@ set numberwidth=5
 filetype plugin indent on
 
 command! W :w
-command! R :!python %
+map <leader>r :QuickRun
 map <leader>s :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 
