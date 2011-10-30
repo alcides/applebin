@@ -1,0 +1,10 @@
+#!/bin/sh
+
+SOURCE="origin"
+BRANCH="master"
+
+[ -z $1 ] && BRANCH=$1
+[ -z $2 ] && ORIGIN=$1 && BRANCH=$2
+
+git pull $SOURCE $BRANCH
+git push $SOURCE $BRANCH
