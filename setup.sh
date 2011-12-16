@@ -1,11 +1,15 @@
 export APPLEBIN=`pwd`
 
-USERNAME=`cat ~/.bash_profile | grep $APPLEBIN`
-if [ "$?" -ne "0" ]; then
-	mv -i ~/.bash_profile ~/.bash_local
-	echo "source $APPLEBIN/dotfiles/.bash_profile" > ~/.bash_profile
-	echo "source ~/.bash_local" >> ~/.bash_profile
+if [ -f ~/.bash_profile ];then
+    USERNAME=`cat ~/.bash_profile | grep $APPLEBIN`
+    if [ "$?" -ne "0" ]; then
+        mv -i ~/.bash_profile ~/.bash_local
+    fi
 fi
+
+touch ~/.bash_local
+echo "source $APPLEBIN/dotfiles/.bash_profile" > ~/.bash_profile
+echo "source ~/.bash_local" >> ~/.bash_profile
 
 rm -rf ~/.vim*
 rm -rf ~/.screenrc
