@@ -35,6 +35,9 @@ export CLICOLOR=1
 # AutoCompletion
 complete -cf sudo
 
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+
 # Utility Shortcuts
 alias up='cd ..'
 alias ls='ls -G'
