@@ -21,6 +21,7 @@ Bundle "hrp/EnhancedCommentify"
 Bundle "derekwyatt/vim-scala"
 Bundle "thinca/vim-quickrun"
 Bundle "scrooloose/syntastic"
+Bundle "Shougo/neocomplcache"
 
 Bundle 'git://git.wincent.com/command-t.git'
 let g:CommandTMatchWindowAtTop=1 " show window at top
@@ -114,8 +115,8 @@ highlight StatusLine      ctermbg=Black ctermfg=LightGrey
 let g:syntastic_enable_signs=1
 
 " Highlight trailing whitespace
-set list listchars=trail:.,tab:>.
-highlight SpecialKey ctermfg=DarkGray ctermbg=Black
+"set list listchars=trail:.,tab:>.
+"highlight SpecialKey ctermfg=DarkGray ctermbg=Black
 
 " Disable toolbar
 if has("gui_running")
