@@ -21,3 +21,6 @@ ln -s $APPLEBIN/dotfiles/.vim ~/.vim
 ln -s $APPLEBIN/dotfiles/.gitignore ~/.gitignore
 ln -s $APPLEBIN/dotfiles/.gitconfig ~/.gitconfig
 ln -s $APPLEBIN/dotfiles/.screenrc ~/.screenrc
+
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+vim +BundleInstall +qall
