@@ -4,29 +4,46 @@
 [core]
 	editor = /usr/bin/vim
 	excludesfile = /Users/alcides/.gitignore
-	whitespace = fix,trailing-space,space-before-tab,cr-at-eol
+	whitespace = space-before-tab,indent-with-non-tab,trailing-space
 	pager = cat
 [rerere]
 	enabled = 1
 	autoupdate = 1
 [alias]
-    w = whatchanged
-    uncommit = reset --soft HEAD^
-    amend = commit --amend -C HEAD
-    weekly = shortlog --since=1weekago
+  w = whatchanged
+  uncommit = reset --soft HEAD^
+  amend = commit --amend -C HEAD
+  weekly = shortlog --since=1weekago
 [push]
 	default = matching
 [apply]
 	ignorewhitespace = change
 	whitespace = fix
 [diff]
-    renames = copy
+  renames = copy
+	tool = filemerge
 [color]
 	ui = true
 	pager = true
-    interactive = auto
-    diff = auto
-    status = auto
-    branch = auto
+  interactive = auto
+  diff = auto
+  status = auto
+  branch = auto
 [url "https://github.com/"]
-    insteadOf = "gh:"
+  insteadOf = "gh:"
+[github]
+	user = alcides
+	token = 0eb59270cc39d5144cbd3ec3c6ab0027
+[clean]
+  requireForce = true
+[difftool "filemerge"]
+  cmd = "/Applications/Xcode.app/Contents/Developer/usr/bin/opendiff $LOCAL $REMOTE"
+[mergetool "opendiff"]
+  cmd = "opendiff \"$LOCAL\"  \"$REMOTE\" \"$(if test -f \"$BASE\"; then echo \"--ancestor $BASE\"; else echo \"--ancestor $LOCAL\"; fi)\" --merge=\"$MERGED\" "
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge\n--result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = true
+[difftool]
+	prompt = false
