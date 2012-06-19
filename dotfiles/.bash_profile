@@ -16,8 +16,11 @@ export DESKTOP=~/Desktop
 
 # External options
 source $DOTFILES/.bash_colors.sh
-source $DOTFILES/.bash_prompt.sh
 source $DOTFILES/git-completion.sh
+
+source $DOTFILES/.bash_prompt.sh
+export PS1="\[\033[G\]$PS1" 
+# This is superimportant to avoid mismatch between cursor and input by 2 spaces.
 
 # Configurations
 export PATH=$PATH:$APPLEBIN/bin
