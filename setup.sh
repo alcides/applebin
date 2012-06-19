@@ -13,6 +13,7 @@ echo "source ~/.bash_local" >> ~/.bash_profile
 
 rm -rf ~/.vim*
 rm -rf ~/.screenrc
+rm -rf ~/.ackrc
 rm -rf ~/.gitignore
 rm -rf ~/.gitconfig
 
@@ -21,6 +22,12 @@ ln -s $APPLEBIN/dotfiles/.vim ~/.vim
 ln -s $APPLEBIN/dotfiles/.gitignore ~/.gitignore
 ln -s $APPLEBIN/dotfiles/.gitconfig ~/.gitconfig
 ln -s $APPLEBIN/dotfiles/.screenrc ~/.screenrc
+ln -s $APPLEBIN/dotfiles/.ackrc ~/.ackrc
+
+if [[ `uname` == 'Darwin' ]]; then
+	source $APPLEBIN/osx/osx_setup.sh
+fi
+
 
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 vim +BundleInstall +qall
