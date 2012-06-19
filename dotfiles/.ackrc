@@ -1,0 +1,10 @@
+--type-add=ruby=.rake,.ru
+--type-add=html=.html,.html.erb,.jsp
+--type-add=js=.js
+--type-add=scala=.scala
+--ignore-dir=.git
+--sort-files
+--color
+--follow
+--group
+--context=3
