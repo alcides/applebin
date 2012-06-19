@@ -22,9 +22,10 @@ Bundle "derekwyatt/vim-scala"
 Bundle "thinca/vim-quickrun"
 Bundle "scrooloose/syntastic"
 Bundle "Shougo/neocomplcache"
+Bundle "kien/ctrlp.vim"
 
-Bundle 'git://git.wincent.com/command-t.git'
-let g:CommandTMatchWindowAtTop=1 " show window at top
+" CtrlP
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$|\.class$|\.pyc$'
 
 " Ack
 Bundle "ack.vim"
