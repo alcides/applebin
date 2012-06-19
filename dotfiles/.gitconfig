@@ -14,6 +14,7 @@
   uncommit = reset --soft HEAD^
   amend = commit --amend -C HEAD
   weekly = shortlog --since=1weekago
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 [push]
 	default = matching
 [apply]
@@ -31,9 +32,6 @@
   branch = auto
 [url "https://github.com/"]
   insteadOf = "gh:"
-[github]
-	user = alcides
-	token = 0eb59270cc39d5144cbd3ec3c6ab0027
 [clean]
   requireForce = true
 [difftool "filemerge"]
