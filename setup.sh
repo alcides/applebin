@@ -23,6 +23,7 @@ ln -s $APPLEBIN/dotfiles/.gitignore ~/.gitignore
 ln -s $APPLEBIN/dotfiles/.gitconfig ~/.gitconfig
 ln -s $APPLEBIN/dotfiles/.screenrc ~/.screenrc
 ln -s $APPLEBIN/dotfiles/.ackrc ~/.ackrc
+ln -s $APPLEBIN/dotfiles/.wgetrc ~/.wgetrc
 
 if [[ `uname` == 'Darwin' ]]; then
 	source $APPLEBIN/osx/osx_setup.sh

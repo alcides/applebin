@@ -16,6 +16,9 @@
   amend = commit --amend -C HEAD
   weekly = shortlog --since=1weekago
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  p = !"git pull; git submodule foreach git pull origin master"
+  c = clone --recursive
+  undopush = push -f origin HEAD^:master
 [push]
 	default = matching
 [apply]
