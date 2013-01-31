@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# I use multiplexed SSH connections, which sometimes stall out when switching IP's.
+# This script cleans up old multiplex processes so I can start new ones.
+#
+# It is _specific_ to my ssh config, which sets ControlPath to /tmp/ssh_mux_%h_%p_%r
+# which is what this script greps for, so be aware you need ssh_mux_%h in ControlPath.
+
+ps aux | grep ssh_mux | grep -v grep | awk '{print $2}' | xargs kill 2&>1 > /dev/null

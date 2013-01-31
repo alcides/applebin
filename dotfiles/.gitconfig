@@ -10,11 +10,12 @@
 	enabled = 1
 	autoupdate = 1
 [alias]
+  ce = add --update
   w = whatchanged
   uncommit = reset --soft HEAD^
   amend = commit --amend -C HEAD
   weekly = shortlog --since=1weekago
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 [push]
 	default = matching
 [apply]
@@ -45,3 +46,5 @@
 	trustExitCode = true
 [difftool]
 	prompt = false
+[help]
+	autocorrect = 1

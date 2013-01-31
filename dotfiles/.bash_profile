@@ -49,13 +49,12 @@ alias e='$EDITOR'
 alias untar='tar xvf'
 alias sizeof='du -h --max-depth=1'
 alias fn='find . -name'
+alias internet='./sshuttle -r alcides@vps:80 0.0.0.0/0 –L 127.0.0.1:443 -vv'
 
 # Mac-Specific
 if [[ `uname` == 'Darwin' ]]; then
   alias cpp='pwd | pbcopy'
   alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
-
-  
 fi
 
 # Git
