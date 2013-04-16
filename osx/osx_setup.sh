@@ -121,7 +121,7 @@ echo "Finder: disable window animations and Get Info animations"
 defaults write com.apple.finder DisableAllAnimations -bool true
 
 echo "Finder: show hidden files by default"
-defaults write com.apple.finder AppleShowAllFiles -bool true
+# defaults write com.apple.finder AppleShowAllFiles -bool true
 
 echo "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
