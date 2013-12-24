@@ -6,6 +6,7 @@
 	excludesfile = /Users/alcides/.gitignore
 	whitespace = space-before-tab,indent-with-non-tab,trailing-space
 	pager = cat
+	ignorecase = false
 [rerere]
 	enabled = 1
 	autoupdate = 1
@@ -19,6 +20,7 @@
   p = !"git pull; git submodule foreach git pull origin master"
   c = clone --recursive
   undopush = push -f origin HEAD^:master
+#  gui = !sh -c '~/Code/Support/homebrew/opt/git/libexec/git-core/git-gui'
 [push]
 	default = matching
 [apply]

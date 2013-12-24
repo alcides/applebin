@@ -37,3 +37,22 @@ brew install r
 
 # Remove outdated versions from the cellar
 brew cleanup
+
+# Cask
+
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+brew cask install skype
+brew cask install gitx
+brew cask install dropbox
+brew cask install jd-gui
+brew cask install simple-comic
+brew cask install transmission
+brew cask install google-chrome
+brew cask install enrarx
+brew cask install vlc
+brew cask install eclipse-ide
+brew cask install mactex
+brew cask install xquartz
+
