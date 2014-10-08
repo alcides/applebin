@@ -11,17 +11,7 @@ Bundle 'gmarik/vundle'
 Bundle "vim-scripts/Wombat"
 
 " Plugins
-Bundle "L9"
-Bundle 'FuzzyFinder'
-Bundle "SuperTab"
-
-Bundle "thinca/vim-quickrun"
-Bundle "gmarik/snipmate.vim"
-Bundle "hrp/EnhancedCommentify"
-Bundle "derekwyatt/vim-scala"
-Bundle "thinca/vim-quickrun"
 Bundle "scrooloose/syntastic"
-Bundle "Shougo/neocomplcache"
 Bundle "kien/ctrlp.vim"
 
 " CtrlP
