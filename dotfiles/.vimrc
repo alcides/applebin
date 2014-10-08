@@ -8,8 +8,6 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-Bundle "vim-scripts/Wombat"
-
 " Plugins
 Bundle "scrooloose/syntastic"
 Bundle "kien/ctrlp.vim"
