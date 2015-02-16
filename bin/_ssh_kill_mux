@@ -6,4 +6,4 @@
 # It is _specific_ to my ssh config, which sets ControlPath to /tmp/ssh_mux_%h_%p_%r
 # which is what this script greps for, so be aware you need ssh_mux_%h in ControlPath.
 
-ps aux | grep ssh_mux | grep -v grep | awk '{print $2}' | xargs kill 2&>1 > /dev/null
+ps aux | grep ssh_mux | grep -v grep | awk '{print $2}' | xargs kill 2 > /dev/null

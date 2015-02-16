@@ -44,7 +44,6 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backspace=indent,eol,start
 
 set background=dark
-colorscheme wombat
 syntax on
 filetype on
 filetype plugin on

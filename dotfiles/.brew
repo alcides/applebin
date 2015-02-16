@@ -43,16 +43,21 @@ brew cleanup
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
-brew cask install skype
+brew cask install adium
+brew cask install amethyst
+brew cask install eclipse-java
 brew cask install gitx
-brew cask install dropbox
-brew cask install jd-gui
-brew cask install simple-comic
-brew cask install transmission
 brew cask install google-chrome
-brew cask install enrarx
-brew cask install vlc
-brew cask install eclipse-ide
+brew cask install dropbox
+brew cask install java
+brew cask install jd-gui
+brew cask install meocloud
 brew cask install mactex
+brew cask install simple-comic
+brew cask install skype
+brew cask install textmate
+brew cask install transmission
+brew cask install unrarx
+brew cask install vlc
 brew cask install xquartz
 
