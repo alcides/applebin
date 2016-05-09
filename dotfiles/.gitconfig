@@ -23,6 +23,7 @@
 #  gui = !sh -c '~/Code/Support/homebrew/opt/git/libexec/git-core/git-gui'
 [push]
 	default = matching
+	recurseSubmodules = on-demand
 [apply]
 	ignorewhitespace = change
 	whitespace = fix

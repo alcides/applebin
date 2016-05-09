@@ -40,8 +40,7 @@ brew cleanup
 
 # Cask
 
-brew tap phinze/homebrew-cask
-brew install brew-cask
+brew install caskroom/cask/brew-cask
 
 brew cask install adium
 brew cask install amethyst
