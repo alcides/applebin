@@ -2,21 +2,7 @@ set nocompatible               " be iMproved
 filetype on
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-Bundle 'gmarik/vundle'
-
-" Plugins
-Bundle "scrooloose/syntastic"
-Bundle "kien/ctrlp.vim"
-
-" CtrlP
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$|\.class$|\.pyc$'
-
 " Ack
-Bundle "ack.vim"
 noremap <LocalLeader># "ayiw:Ack <C-r>a<CR>
 vnoremap <LocalLeader># "ay:Ack <C-r>a<CR>
 

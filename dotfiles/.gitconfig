@@ -20,6 +20,9 @@
   p = !"git pull; git submodule foreach git pull origin master"
   c = clone --recursive
   undopush = push -f origin HEAD^:master
+  stash-all = stash save --include-untracked
+  prune = fetch --prune
+  permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
 #  gui = !sh -c '~/Code/Support/homebrew/opt/git/libexec/git-core/git-gui'
 [push]
 	default = matching
