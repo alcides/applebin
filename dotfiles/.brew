@@ -40,9 +40,6 @@ brew cleanup
 
 # Cask
 
-brew install caskroom/cask/brew-cask
-
-brew cask install adium
 brew cask install amethyst
 brew cask install eclipse-java
 brew cask install gitx
@@ -50,7 +47,6 @@ brew cask install google-chrome
 brew cask install dropbox
 brew cask install java
 brew cask install jd-gui
-brew cask install meocloud
 brew cask install mactex
 brew cask install simple-comic
 brew cask install skype
