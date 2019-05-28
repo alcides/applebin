@@ -34,6 +34,7 @@ brew install htop-osx
 brew install jpeg
 brew install pil
 brew install r
+brew install unrarx
 
 # Remove outdated versions from the cellar
 brew cleanup
@@ -55,4 +56,5 @@ brew cask install transmission
 brew cask install unrarx
 brew cask install vlc
 brew cask install xquartz
+brew cask install pritunl # VPN FCUL
 

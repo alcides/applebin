@@ -8,3 +8,5 @@ xlwt
 numexpr
 bottleneck
 seaborn
+sklearn
+imbalanced-learn

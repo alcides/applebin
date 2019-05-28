@@ -9,6 +9,8 @@ cd `dirname ${SCRIPT_PATH}` > /dev/null
 SCRIPT_PATH=`pwd`;
 popd  > /dev/null
 
+ssh-add -K
+
 # Locations:
 export DOTFILES=$SCRIPT_PATH
 export APPLEBIN=$DOTFILES/..
@@ -67,6 +69,8 @@ alias st='git status -s'
 alias ca='git commit -a -m'
 alias sup='svn up'
 
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+
 # Python/Django
 alias syncdb='python manage.py syncdb'
 alias runserver='python manage.py runserver'
@@ -81,3 +85,7 @@ export LC_MONETARY="en_US.UTF-8"
 export LC_NUMERIC="en_US.UTF-8"  
 export LC_TIME="en_US.UTF-8"  
 export LC_ALL="en_US.UTF-8"
+
+setjdk() {
+    export JAVA_HOME=$(/usr/libexec/java_home -v $1)
+}

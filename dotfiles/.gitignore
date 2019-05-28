@@ -1,7 +1,5 @@
+*.class
+.texpadtmp/
 .DS_Store
-Thumbs.db
-Desktop.ini
-*.pyc
-_twitter.yml
-.viminfo
-.settings
+*.bbl
+*.blg
