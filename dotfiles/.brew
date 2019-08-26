@@ -32,7 +32,9 @@ brew install haskell-platform
 brew install graphviz
 brew install htop-osx
 brew install jpeg
+brew install python
 brew install pil
+brew install sqlite
 brew install r
 brew install unrarx
 
@@ -42,13 +44,16 @@ brew cleanup
 # Cask
 
 brew cask install amethyst
+brew cask install backblaze
+brew cask install dropbox
 brew cask install eclipse-java
 brew cask install gitx
 brew cask install google-chrome
-brew cask install dropbox
 brew cask install java
 brew cask install jd-gui
-brew cask install basictex
+brew cask install mactex
+brew cask install nextcloud
+brew cask install pritunl # VPN FCUL
 brew cask install simple-comic
 brew cask install skype
 brew cask install textmate
@@ -56,5 +61,3 @@ brew cask install transmission
 brew cask install unrarx
 brew cask install vlc
 brew cask install xquartz
-brew cask install pritunl # VPN FCUL
-

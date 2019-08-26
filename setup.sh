@@ -27,8 +27,6 @@ ln -s $APPLEBIN/dotfiles/.wgetrc ~/.wgetrc
 
 if [[ `uname` == 'Darwin' ]]; then
 	source $APPLEBIN/osx/osx_setup.sh
+	source $APPLEBIN/dotfiles/.brew
+	open osx/osxeditorconfig-textmate.tmplugin
 fi
-
-
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-vim +BundleInstall +qall

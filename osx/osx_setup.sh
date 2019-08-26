@@ -235,6 +235,10 @@ defaults write org.m0k.transmission WarningDonate -bool false
 defaults write org.m0k.transmission WarningLegal -bool false
 
 
+echo "Disable notifications in Safari"
+defaults write ~/Library/Preferences/com.apple.Safari CanPromptForPushNotifications -boolean NO
+
+
 echo "Kill affected applications"
 for app in "Safari" "Finder" "Dock" "Mail" "SystemUIServer" "Terminal" "Transmission"; do killall "$app" >/dev/null 2>&1; done
 
