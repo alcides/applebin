@@ -16,13 +16,8 @@ export DOTFILES=$SCRIPT_PATH
 export APPLEBIN=$DOTFILES/..
 export DESKTOP=~/Desktop
 
-# External options
-source $DOTFILES/.bash_colors.sh
 source $DOTFILES/git-completion.sh
 
-source $DOTFILES/.bash_prompt.sh
-export PS1="\[\033[G\]$PS1" 
-# This is superimportant to avoid mismatch between cursor and input by 2 spaces.
 
 # Configurations
 export PATH=$PATH:$APPLEBIN/bin
@@ -33,9 +28,23 @@ if [[ `uname` == 'Darwin' ]]; then
 else
     export EDITOR='vim'
 fi
-export TERM=xterm-color
-export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
-export CLICOLOR=1
+
+
+if [ -n "$ZSH_VERSION" ]; then
+   # assume Zsh
+elif [ -n "$BASH_VERSION" ]; then
+   # assume Bash
+  export TERM=xterm-color
+  export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+  export CLICOLOR=1
+
+  source $DOTFILES/.bash_colors.sh
+  source $DOTFILES/.bash_prompt.sh
+  export PS1="\[\033[G\]$PS1" 
+  # This is superimportant to avoid mismatch between cursor and input by 2 spaces.
+else
+   # asume something else
+fi
 
 # AutoCompletion
 complete -cf sudo
@@ -46,6 +55,7 @@ complete -cf sudo
 # Utility Shortcuts
 alias up='cd ..'
 alias ls='ls -G'
+alias ll='ls -la'
 alias sugo='sudo'
 alias e='$EDITOR'
 alias untar='tar xvf'

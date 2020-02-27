@@ -10,6 +10,7 @@ fi
 touch ~/.bash_local
 echo "source $APPLEBIN/dotfiles/.bash_profile" > ~/.bash_profile
 echo "source ~/.bash_local" >> ~/.bash_profile
+echo "source $APPLEBIN/dotfiles/.zshrc" > ~/.zprofile
 
 rm -rf ~/.vim*
 rm -rf ~/.screenrc

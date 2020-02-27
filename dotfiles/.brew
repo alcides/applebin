@@ -25,9 +25,9 @@ brew install homebrew/dupes/grep
 brew install ack
 brew install git
 brew install imagemagick
-brew install lynx
+#brew install lynx
 brew install tree
-brew install webkit2png
+#brew install webkit2png
 brew install haskell-platform
 brew install graphviz
 brew install htop-osx
@@ -35,7 +35,7 @@ brew install jpeg
 brew install python
 brew install pil
 brew install sqlite
-brew install r
+#brew install r
 brew install unrarx
 
 # Remove outdated versions from the cellar
@@ -43,18 +43,18 @@ brew cleanup
 
 # Cask
 
+brew cask install simple-comic
 brew cask install amethyst
 brew cask install backblaze
 brew cask install dropbox
 brew cask install eclipse-java
-brew cask install gitx
+#brew cask install gitx
 brew cask install google-chrome
 brew cask install java
 brew cask install jd-gui
 brew cask install mactex
 brew cask install nextcloud
 brew cask install pritunl # VPN FCUL
-brew cask install simple-comic
 brew cask install skype
 brew cask install textmate
 brew cask install transmission
