@@ -1,7 +1,7 @@
 # Setup
 SCRIPT_PATH=$0:A
 
-ssh-add -K
+ssh-add  --apple-use-keychain  #-K
 
 # Locations:
 export DOTFILES=$(dirname $SCRIPT_PATH)
