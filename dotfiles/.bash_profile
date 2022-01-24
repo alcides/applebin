@@ -47,9 +47,10 @@ else
 fi
 
 
-if [ -n "$ZSH_VERSION" ]; then
+#if [ -n "$ZSH_VERSION" ]; then
    # assume Zsh
-elif [ -n "$BASH_VERSION" ]; then
+   #fi
+if [ -n "$BASH_VERSION" ]; then
    # assume Bash
   export TERM=xterm-color
   export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
@@ -66,8 +67,6 @@ elif [ -n "$BASH_VERSION" ]; then
   
   export PS1="\[\033[G\]$PS1" 
   # This is superimportant to avoid mismatch between cursor and input by 2 spaces.
-else
-   # asume something else
 fi
 
 

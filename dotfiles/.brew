@@ -15,48 +15,48 @@ brew install findutils
 brew install bash
 
 # Install wget with IRI support
-brew install wget --enable-iri
-
-# Install more recent versions of some OS X tools
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep
+brew install wget
 
 # Install everything else
-brew install ack
+#brew install ack
 brew install git
 brew install git-gui
 brew install imagemagick
 #brew install lynx
 brew install tree
 #brew install webkit2png
-brew install haskell-platform
+#brew install haskell-platform
 brew install graphviz
 brew install htop-osx
 brew install jpeg
-brew install python
-brew install pil
+#brew install python
+#brew install pil
 brew install sqlite
 brew install svn
 #brew install r
-brew install unrarx
+#brew install unrarx
 
 # Remove outdated versions from the cellar
 brew cleanup
 
 # Cask
 
-brew cask install simple-comic
+#brew cask install simple-comic
 brew cask install amethyst
-brew cask install backblaze
-brew cask install dropbox
-brew cask install eclipse-java
+#brew cask install backblaze
+#brew cask install dropbox
+#brew cask install eclipse-java
 #brew cask install gitx
-brew cask install google-chrome
-brew cask install java
-brew cask install jd-gui
+#brew cask install google-chrome
+#brew cask install java
+#brew cask install jd-gui
 brew cask install mactex
+<<<<<<< HEAD
 brew cask install microsoft-office
 brew cask install nextcloud
+=======
+#brew cask install nextcloud
+>>>>>>> 10516332987cbb22a660a5376f0392ebb7d9cc59
 brew cask install pritunl # VPN FCUL
 brew cask install skype
 brew cask install textmate
@@ -64,6 +64,9 @@ brew cask install transmission
 brew cask install unrarx
 brew cask install vlc
 brew cask install visual-studio-code
+#brew cask install unrarx
+#brew cask install vlc
+brew cask install iina
 brew cask install xquartz
 brew cask install zoom
 
