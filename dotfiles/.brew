@@ -51,12 +51,8 @@ brew cask install amethyst
 #brew cask install java
 #brew cask install jd-gui
 brew cask install mactex
-<<<<<<< HEAD
 brew cask install microsoft-office
-brew cask install nextcloud
-=======
 #brew cask install nextcloud
->>>>>>> 10516332987cbb22a660a5376f0392ebb7d9cc59
 brew cask install pritunl # VPN FCUL
 brew cask install skype
 brew cask install textmate
