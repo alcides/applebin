@@ -27,7 +27,10 @@ ln -s $APPLEBIN/dotfiles/.ackrc ~/.ackrc
 ln -s $APPLEBIN/dotfiles/.wgetrc ~/.wgetrc
 
 if [[ `uname` == 'Darwin' ]]; then
-	source $APPLEBIN/osx/osx_setup.sh
 	source $APPLEBIN/dotfiles/.brew
 	open osx/osxeditorconfig-textmate.tmplugin
+	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	
+	
+	source $APPLEBIN/osx/osx_setup.sh
 fi

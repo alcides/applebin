@@ -24,6 +24,7 @@ brew install homebrew/dupes/grep
 # Install everything else
 brew install ack
 brew install git
+brew install git-gui
 brew install imagemagick
 #brew install lynx
 brew install tree
@@ -35,6 +36,7 @@ brew install jpeg
 brew install python
 brew install pil
 brew install sqlite
+brew install svn
 #brew install r
 brew install unrarx
 
@@ -53,6 +55,7 @@ brew cask install google-chrome
 brew cask install java
 brew cask install jd-gui
 brew cask install mactex
+brew cask install microsoft-office
 brew cask install nextcloud
 brew cask install pritunl # VPN FCUL
 brew cask install skype
@@ -60,4 +63,13 @@ brew cask install textmate
 brew cask install transmission
 brew cask install unrarx
 brew cask install vlc
+brew cask install visual-studio-code
 brew cask install xquartz
+brew cask install zoom
+
+brew tap homebrew/cask-fonts
+brew cask install \
+  font-fira-code \
+  font-fira-mono \
+  font-fira-mono-for-powerline \
+  font-fira-sans

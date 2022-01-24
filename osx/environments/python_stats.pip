@@ -1,0 +1,12 @@
+pandas
+matplotlib
+scipy
+statsmodels
+openpyxl
+xlrd
+xlwt
+numexpr
+bottleneck
+seaborn
+sklearn
+imbalanced-learn
