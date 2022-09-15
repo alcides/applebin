@@ -3,6 +3,15 @@
 # Ask for the administrator password upfront
 sudo -v
 
+
+# Network Configuration
+#
+# networksetup -createlocation TBP populate
+# networksetup -switchtolocation TBP
+# networksetup -setdnsservers "Wi-Fi" 8.8.8.8 1.1.1.1
+# networksetup -switchtolocation Automatic
+
+
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
@@ -73,6 +82,9 @@ chflags nohidden ~/Library
 
 echo "Local Storage as Default instead of iCloud"
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+echo "Old floating dialogs"
+defaults write -g NSAlertMetricsGatheringEnabled -bool false
 
 #################
 # Keyboard
