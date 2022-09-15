@@ -41,33 +41,33 @@ brew cleanup
 
 # Cask
 
-#brew cask install simple-comic
-brew cask install amethyst
-#brew cask install backblaze
-#brew cask install dropbox
-#brew cask install eclipse-java
-#brew cask install gitx
-#brew cask install google-chrome
-#brew cask install java
-#brew cask install jd-gui
-brew cask install mactex
-brew cask install microsoft-office
-#brew cask install nextcloud
-brew cask install pritunl # VPN FCUL
-brew cask install skype
-brew cask install textmate
-brew cask install transmission
-brew cask install unrarx
-brew cask install vlc
-brew cask install visual-studio-code
-#brew cask install unrarx
-#brew cask install vlc
-brew cask install iina
-brew cask install xquartz
-brew cask install zoom
+#brew install --cask simple-comic
+brew install --cask amethyst
+#brew install --cask backblaze
+#brew install --cask dropbox
+#brew install --cask eclipse-java
+#brew install --cask gitx
+#brew install --cask google-chrome
+#brew install --cask java
+#brew install --cask jd-gui
+brew install --cask mactex
+brew install --cask microsoft-office
+#brew install --cask nextcloud
+brew install --cask pritunl # VPN FCUL
+brew install --cask skype
+brew install --cask textmate
+brew install --cask transmission
+brew install --cask unrarx
+brew install --cask vlc
+brew install --cask visual-studio-code
+#brew install --cask unrarx
+#brew install --cask vlc
+brew install --cask iina
+brew install --cask xquartz
+brew install --cask zoom
 
 brew tap homebrew/cask-fonts
-brew cask install \
+brew install --cask \
   font-fira-code \
   font-fira-mono \
   font-fira-mono-for-powerline \
