@@ -32,7 +32,7 @@ brew install jpeg
 #brew install python
 #brew install pil
 brew install sqlite
-brew install svn
+#brew install svn
 #brew install r
 #brew install unrarx
 
@@ -43,14 +43,14 @@ brew cleanup
 
 #brew install --cask simple-comic
 brew install --cask amethyst
-#brew install --cask backblaze
+brew install --cask backblaze
 #brew install --cask dropbox
 #brew install --cask eclipse-java
 #brew install --cask gitx
 #brew install --cask google-chrome
 #brew install --cask java
 #brew install --cask jd-gui
-brew install --cask mactex
+#brew install --cask mactex
 brew install --cask microsoft-office
 #brew install --cask nextcloud
 brew install --cask pritunl # VPN FCUL
@@ -58,13 +58,12 @@ brew install --cask skype
 brew install --cask textmate
 brew install --cask transmission
 brew install --cask unrarx
-brew install --cask vlc
-brew install --cask visual-studio-code
-#brew install --cask unrarx
 #brew install --cask vlc
+brew install --cask visual-studio-code
 brew install --cask iina
 brew install --cask xquartz
 brew install --cask zoom
+brew install --cask texpad
 
 brew tap homebrew/cask-fonts
 brew install --cask \

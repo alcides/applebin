@@ -11,19 +11,23 @@
 	enabled = 1
 	autoupdate = 1
 [alias]
-  ce = add --update
-  w = whatchanged
-  uncommit = reset --soft HEAD^
-  amend = commit --amend -C HEAD
-  weekly = shortlog --since=1weekago
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-  p = !"git pull; git submodule foreach git pull origin master"
-  c = clone --recursive
-  undopush = push -f origin HEAD^:master
-  stash-all = stash save --include-untracked
-  prune = fetch --prune
-  permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+	ce = add --update
+	w = whatchanged
+	uncommit = reset --soft HEAD^
+	amend = commit --amend -C HEAD
+	weekly = shortlog --since=1weekago
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	p = !"git pull; git submodule foreach git pull origin master"
+	c = clone --recursive
+	undopush = push -f origin HEAD^:master
+	stash-all = stash save --include-untracked
+	prune = fetch --prune
+	permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
 #  gui = !sh -c '~/Code/Support/homebrew/opt/git/libexec/git-core/git-gui'
+	local-branch-dates  = !git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' # Get the activity date for each local branch
+	remote-branch-dates = !git branch -r --sort=-committerdate --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)|%(color:magenta)%(authorname)%(color:reset)' --color=always | column -ts'|'
+	lm      = log --pretty=%B -1 # Print out the entirety of the previous log message, pipe to pbcopy for copying to clipboard.
+	search  = !git pretty --all -S # Search for text within a commit
 [push]
 	default = matching
 	recurseSubmodules = on-demand
@@ -59,3 +63,10 @@
 	autocorrect = 1
 [pull]
 	rebase = false
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[init]
+	defaultBranch = main

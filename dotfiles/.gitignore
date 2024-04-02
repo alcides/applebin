@@ -1,6 +1,5 @@
-*.class
-.texpadtmp/
+__pycache__
 .DS_Store
-*.bbl
-*.blg
-glyphtounicode.tex
+target/classes/*
+.texpadtmp
+.venv
