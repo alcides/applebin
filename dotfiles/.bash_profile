@@ -1,22 +1,39 @@
 # Setup
-SCRIPT_PATH="${BASH_SOURCE[0]}";
-if([ -h "${SCRIPT_PATH}" ]) then
-    while([ -h "${SCRIPT_PATH}" ]) do SCRIPT_PATH=`readlink "${SCRIPT_PATH}"`;
-    done
-fi
-pushd . > /dev/null
-cd `dirname ${SCRIPT_PATH}` > /dev/null
-SCRIPT_PATH=`pwd`;
-popd  > /dev/null
 
-ssh-add -K
+if [ -n "$BASH_VERSION" ]; then
+  SCRIPT_PATH="${BASH_SOURCE[0]}"
+else
+  SCRIPT_PATH=$0:A
+fi
+  if [ -h "${SCRIPT_PATH}" ]; then
+      while [ -h "${SCRIPT_PATH}" ]; do 
+        SCRIPT_PATH=`readlink "${SCRIPT_PATH}"`;
+      done;
+  fi
+  pushd . > /dev/null
+  cd `dirname ${SCRIPT_PATH}` > /dev/null
+  SCRIPT_PATH=`pwd`
+  popd  > /dev/null
+
+#ssh-add -K
 
 # Locations:
 export DOTFILES=$SCRIPT_PATH
 export APPLEBIN=$DOTFILES/..
 export DESKTOP=~/Desktop
 
-source $DOTFILES/git-completion.sh
+
+powerstat() {
+    b=$(system_profiler SPPowerDataType)
+    amp=$(echo "$b" | grep 'Amperage (mA):' | cut -d ':' -f 2 | xargs)
+    volt=$(echo "$b" | grep 'Voltage (mV):' | cut -d ':' -f 2 | xargs)
+    power=$(($amp * $volt / 1000))
+    echo "$b" | grep --color=never -A 1 'Battery Information:'
+    echo "$b" | grep --color=never -A 1 'Amperage (mA)'
+    echo "      Total Power (mW): $power"
+    echo ""
+    echo "$b" | grep --color=never -A 99 'AC Charger Information:'
+}
 
 
 # Configurations
@@ -41,15 +58,19 @@ if [ -n "$BASH_VERSION" ]; then
 
   source $DOTFILES/.bash_colors.sh
   source $DOTFILES/.bash_prompt.sh
+  
+  # AutoCompletion
+  source $DOTFILES/git-completion.sh
+  complete -cf sudo
+  # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+  [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+  
   export PS1="\[\033[G\]$PS1" 
   # This is superimportant to avoid mismatch between cursor and input by 2 spaces.
 fi
 
-# AutoCompletion
-complete -cf sudo
 
-# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+
 
 # Utility Shortcuts
 alias up='cd ..'
@@ -62,6 +83,10 @@ alias sizeof='du -h --max-depth=1'
 alias fn='find . -name'
 alias internet='./sshuttle -r alcides@vps:80 0.0.0.0/0 –L 127.0.0.1:443 -vv'
 alias funmount='fusermount -u'
+
+alias hideicons='defaults write com.apple.finder CreateDesktop -bool false && killall Finder'
+alias showicons='defaults write com.apple.finder CreateDesktop -bool true && killall Finder'
+
 
 # Mac-Specific
 if [[ `uname` == 'Darwin' ]]; then
@@ -96,5 +121,9 @@ export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 setjdk() {
+    unset JAVA_HOME
     export JAVA_HOME=$(/usr/libexec/java_home -v $1)
 }
+
+export SQUEUE_FORMAT="%.18i %.9P %.30j %.8u %.8T %.10M %.9l %.6D %R"
+

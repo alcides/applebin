@@ -3,29 +3,38 @@
 # Ask for the administrator password upfront
 sudo -v
 
+
+# Network Configuration
+#
+networksetup -createlocation TBP populate
+networksetup -switchtolocation TBP
+networksetup -setdnsservers "Wi-Fi" 8.8.8.8 1.1.1.1
+networksetup -switchtolocation Automatic
+
+
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+#while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-echo "Hidden windows blurs mac icon"
-defaults write com.apple.Dock showhidden -bool TRUE; killall Dock
+#echo "Hidden windows blurs mac icon"
+#defaults write com.apple.Dock showhidden -bool TRUE; killall Dock
 
-echo "Menu bar: disable transparency"
-defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
+#echo "Menu bar: disable transparency"
+#defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
 echo "Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
-echo "Enable the 2D Dock"
-defaults write com.apple.dock no-glass -bool true
+#echo "Enable the 2D Dock"
+#defaults write com.apple.dock no-glass -bool true
 
 echo "Automatically hide and show the Dock"
 defaults write com.apple.dock autohide -bool true
 
 # Hid remaining battery time; hide percentage
-defaults write com.apple.menuextra.battery ShowPercent -string "NO"
-defaults write com.apple.menuextra.battery ShowTime -string "NO"
+#defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+#defaults write com.apple.menuextra.battery ShowTime -string "NO"
 
 echo "Always show scrollbars"
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
@@ -51,8 +60,8 @@ defaults write com.apple.dock show-process-indicators -bool true
 echo "Disable auto-correct"
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-echo "Enable AirDrop over Ethernet and on unsupported Macs running Lion"
-defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+#echo "Enable AirDrop over Ethernet and on unsupported Macs running Lion"
+#defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 echo "Disable disk image verification"
 defaults write com.apple.frameworks.diskimages skip-verify -bool true
@@ -73,6 +82,9 @@ chflags nohidden ~/Library
 
 echo "Local Storage as Default instead of iCloud"
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+echo "Old floating dialogs"
+defaults write -g NSAlertMetricsGatheringEnabled -bool false
 
 #################
 # Keyboard
@@ -122,8 +134,8 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Finder
 #################
 
-echo "Finder: disable window animations and Get Info animations"
-defaults write com.apple.finder DisableAllAnimations -bool true
+#echo "Finder: disable window animations and Get Info animations"
+#defaults write com.apple.finder DisableAllAnimations -bool true
 
 echo "Finder: show hidden files by default"
 # defaults write com.apple.finder AppleShowAllFiles -bool true

@@ -1,7 +1,14 @@
 __pycache__
+<<<<<<< HEAD
 *.class
 .texpadtmp/
 .DS_Store
 *.bbl
 *.blg
 *.pyc
+=======
+.DS_Store
+target/classes/*
+.texpadtmp
+.venv
+>>>>>>> 08b961f156c4b5625b093150d55a11825b1e3a5e

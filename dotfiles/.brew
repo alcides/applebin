@@ -1,0 +1,73 @@
+#!/bin/bash
+
+# Make sure we’re using the latest Homebrew
+brew update
+
+# Upgrade any already-installed formulae
+brew upgrade
+
+# Install GNU core utilities (those that come with OS X are outdated)
+brew install coreutils
+echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew install findutils
+# Install Bash 4
+brew install bash
+
+# Install wget with IRI support
+brew install wget
+
+# Install everything else
+#brew install ack
+brew install git
+brew install git-gui
+brew install imagemagick
+#brew install lynx
+brew install tree
+#brew install webkit2png
+#brew install haskell-platform
+brew install graphviz
+brew install htop-osx
+brew install jpeg
+#brew install python
+#brew install pil
+brew install sqlite
+#brew install svn
+#brew install r
+#brew install unrarx
+
+# Remove outdated versions from the cellar
+brew cleanup
+
+# Cask
+
+#brew install --cask simple-comic
+brew install --cask amethyst
+brew install --cask backblaze
+#brew install --cask dropbox
+#brew install --cask eclipse-java
+#brew install --cask gitx
+#brew install --cask google-chrome
+#brew install --cask java
+#brew install --cask jd-gui
+#brew install --cask mactex
+brew install --cask microsoft-office
+#brew install --cask nextcloud
+brew install --cask pritunl # VPN FCUL
+brew install --cask skype
+brew install --cask textmate
+brew install --cask transmission
+brew install --cask unrarx
+#brew install --cask vlc
+brew install --cask visual-studio-code
+brew install --cask iina
+brew install --cask xquartz
+brew install --cask zoom
+brew install --cask texpad
+
+brew tap homebrew/cask-fonts
+brew install --cask \
+  font-fira-code \
+  font-fira-mono \
+  font-fira-mono-for-powerline \
+  font-fira-sans
