@@ -1,5 +1,7 @@
+__pycache__
 *.class
 .texpadtmp/
 .DS_Store
 *.bbl
 *.blg
+*.pyc
