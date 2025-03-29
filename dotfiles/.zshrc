@@ -55,6 +55,10 @@ alias runserver='python manage.py runserver'
 alias nomediarunserver='python manage.py runserver --adminmedia=./static/adminmedia/'
 alias m='python manage.py'
 
+alias bbic="brew update &&\
+    brew bundle install --cleanup --file=$APPLEBIN/dotfiles/Brewfile &&\
+    brew upgrade"
+
 export LANG="en_US.UTF-8"  
 export LC_COLLATE="en_US.UTF-8"  
 export LC_CTYPE="en_US.UTF-8"  

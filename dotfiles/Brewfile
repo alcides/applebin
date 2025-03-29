@@ -1,0 +1,55 @@
+# Moreutils provides, for example, vipe
+brew "coreutils"
+brew "moreutils"
+brew "findutils"
+
+
+# macOS ships with a slightly out-of-date `less`
+brew "less"
+brew "cat"
+brew "wget"
+brew "bash"
+brew "git"
+brew "git-gui"
+brew "git-lfs"
+brew "tree"
+brew "imagemagick"
+brew "graphviz"
+brew "htop-osx"
+brew "telnet"
+brew "freetype"
+
+# dev
+brew "rust"
+brew "sqlite"
+brew "openjdk@21"
+brew "z3"
+
+
+
+cask "amethyst"
+cask "backblaze"
+cask "discord"
+cask "mactex-no-gui"
+cask "monitorcontrol"
+cask "microsoft-office"
+cask "openinterminal"
+cask "plex"
+cask "pritunl"
+cask "signal"
+cask "slack"
+cask "syntax-highlight"
+cask "tailscale"
+cask "textmate"
+cask "the-unarchiver"
+cask "transmission"
+cask "visual-studio-code"
+cask "vlc"
+cask "xquartz"
+cask "zoom"
+
+cask "font-fira-code"
+cask "font-fira-code-nerd-font"
+cask "font-fira-mono"
+cask "font-fira-mono-nerd-font"
+cask "font-hack-nerd-font"

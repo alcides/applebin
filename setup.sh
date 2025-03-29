@@ -26,8 +26,14 @@ ln -s $APPLEBIN/dotfiles/.screenrc ~/.screenrc
 ln -s $APPLEBIN/dotfiles/.ackrc ~/.ackrc
 ln -s $APPLEBIN/dotfiles/.wgetrc ~/.wgetrc
 
+
+
 if [[ `uname` == 'Darwin' ]]; then
 	source $APPLEBIN/osx/osx_setup.sh
-	source $APPLEBIN/dotfiles/.brew
+	
+	brew update &&\
+	    brew bundle install --cleanup --file=$APPLEBIN/dotfiles/Brewfile &&\
+	    brew upgrade
+	
 	open osx/osxeditorconfig-textmate.tmplugin
 fi
