@@ -29,17 +29,12 @@ ln -s $APPLEBIN/dotfiles/.wgetrc ~/.wgetrc
 
 
 if [[ `uname` == 'Darwin' ]]; then
-<<<<<<< HEAD
 	source $APPLEBIN/osx/osx_setup.sh
 	
 	brew update &&\
 	    brew bundle install --cleanup --file=$APPLEBIN/dotfiles/Brewfile &&\
 	    brew upgrade
 	
-=======
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	source $APPLEBIN/dotfiles/.brew
->>>>>>> 08b961f156c4b5625b093150d55a11825b1e3a5e
 	open osx/osxeditorconfig-textmate.tmplugin
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	
